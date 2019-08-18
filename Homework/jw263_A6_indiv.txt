@@ -1,0 +1,59 @@
+James Wang 
+Group 13
+I211 Indiv. HW 6
+
+#1
+A. Log into Burrow. ssh jw263@burrow.soic.indiana.edu
+B. mysql -h db.soic.indiana.edu -p -u i211f17_jw263 i211f17_jw263
+
+#default command to connect to MySQL
+
+C. my+sql=i211f17_jw263
+
+#password for MySQL
+
+D. MariaDB [i211f17_jw263]> CREATE TABLE Singer
+    -> (SingerID int (11) UNIQUE,
+    -> FirstName varchar (30),
+    -> LastName varchar (30),
+    -> Label varchar (30),
+    -> Salary int (11),
+    -> Style varchar (30));
+Query OK, 0 rows affected (0.00 sec)
+
+#Creates table
+
+E. MariaDB [i211f17_jw263]> DESCRIBE Singer;
+
+#Shows the table
+
+#2
+A. MariaDB [i211f17_jw263]> CREATE TABLE Tour
+    -> (TourID int (11) UNIQUE,
+    -> TourName varchar (30),
+    -> Begin date,
+    -> End date,
+    -> Headliner int (11));
+Query OK, 0 rows affected (0.01 sec)
+
+#Creates Table
+
+B. MariaDB [i211f17_jw263]> DESCRIBE Tour;
+
+#Shows Table
+
+#3
+#Statement that adds "John Lennon" to the Singer Table
+
+MariaDB [i211f17_jw263]> INSERT INTO Singer
+    -> VALUES (1, "John", "Lennon", "J.L.", 12000000, "Rock");
+
+#4
+#Statement that will show all singers with salary greater than 250000 on the Sony Label
+
+mysql> SELECT * FROM Sony Label
+-> WHERE Salary > 250000;
+
+
+
+
